@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yayasan Smart Tuning Nusantara (STN) | Pusat Vokasi Otomotif Digital</title>
+    <meta name="description" content="Pusat pelatihan vokasi otomotif berbasis analisis Data Stream ECU. Yayasan STN terdaftar resmi Kemenkumham RI.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Particle Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Background Icon Scatter Layer -->
+    <div id="bg-icons" aria-hidden="true"></div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-wrap">
+            <a href="#beranda" class="brand">
+                <img src="LOGOstn.png" alt="Logo STN" class="brand-img-real">
+                <div class="brand-name">
+                    <span class="brand-primary">Smart Tuning</span>
+                    <span class="brand-secondary">Nusantara</span>
+                </div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#beranda" class="nav-link">Beranda</a></li>
+                <li><a href="#tentang" class="nav-link">Tentang</a></li>
+                <li><a href="#visi-misi" class="nav-link">Visi & Misi</a></li>
+                <li><a href="#kurikulum" class="nav-link">Kurikulum</a></li>
+                <li><a href="#metode" class="nav-link">Metode</a></li>
+                <li><a href="#kontak" class="btn-nav">Hubungi Kami</a></li>
+            </ul>
+            <button class="nav-hamburger" id="navToggle" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="beranda" class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-glow-2"></div>
+
+        <div class="container hero-inner">
+            <div class="hero-label reveal-up" data-delay="0">
+                <span class="dot-live"></span>
+                Terdaftar Resmi Kemenkumham RI · No. AHU-0012927.AH.01.04.Tahun 2025
+            </div>
+
+            <h1 class="hero-title reveal-up" data-delay="100">
+                <span class="text-gradient">Transformasi</span><br>
+                Mekanik Tradisional<br>
+                Menjadi<br>
+                <span class="text-gradient">Teknisi Digital Profesional.</span>
+            </h1>
+
+            <p class="hero-subtitle reveal-up" data-delay="200">
+                Pusat pelatihan vokasi otomotif berbasis analisis Data Stream ECU dan teknologi kendaraan modern untuk mencetak teknisi mandiri dan presisi.
+            </p>
+
+            <div class="hero-actions reveal-up" data-delay="300">
+                <a href="#kurikulum" class="btn btn-primary">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Program 6 Bulan
+                </a>
+                <a href="https://wa.me/6282299434398" target="_blank" class="btn btn-outline" rel="noopener">
+                    <i class="fa-solid fa-comments"></i>
+                    Konsultasi Sekarang
+                </a>
+            </div>
+
+            <div class="hero-stats reveal-up" data-delay="400">
+                <div class="stat-item">
+                    <span class="stat-num" data-count="6" data-suffix=" Bulan">0</span>
+                    <span class="stat-label">Durasi Program</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num" data-count="5" data-suffix=" Modul">0</span>
+                    <span class="stat-label">Keahlian Teknis</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num" data-count="100" data-suffix="%">0</span>
+                    <span class="stat-label">Legal & Bersertifikat</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+
+        <!-- Floating Icons Panel -->
+        <div class="hero-icons-float" aria-hidden="true">
+            <div class="float-icon fi-1" style="--fi-delay:0s"><img src="icon bengkel/diagnostic.png" alt=""></div>
+            <div class="float-icon fi-2" style="--fi-delay:0.4s"><img src="icon bengkel/chipset.png" alt=""></div>
+            <div class="float-icon fi-3" style="--fi-delay:0.8s"><img src="icon bengkel/car-engine.png" alt=""></div>
+            <div class="float-icon fi-4" style="--fi-delay:1.2s"><img src="icon bengkel/electric-vehicle.png" alt=""></div>
+            <div class="float-icon fi-5" style="--fi-delay:1.6s"><img src="icon bengkel/speedometer.png" alt=""></div>
+            <div class="float-icon fi-6" style="--fi-delay:2.0s"><img src="icon bengkel/wireless.png" alt=""></div>
+            <div class="float-icon fi-7" style="--fi-delay:2.4s"><img src="icon bengkel/turbo.png" alt=""></div>
+            <div class="float-icon fi-8" style="--fi-delay:2.8s"><img src="icon bengkel/steering-wheel.png" alt=""></div>
+            <div class="orbit-ring ring-1"></div>
+            <div class="orbit-ring ring-2"></div>
+        </div>
+    </section>
+
+
+    <!-- ===== TENTANG / LEGALITAS ===== -->
+    <section id="tentang" class="sect">
+        <div class="container">
+            <div class="two-col-grid">
+                <div class="col-text">
+                    <div class="section-tag reveal-left">Tentang Kami</div>
+                    <h2 class="section-title reveal-left" data-delay="100">Demokratisasi Akses Ilmu Otomotif Tingkat Lanjut</h2>
+                    <div class="title-bar reveal-left" data-delay="150"></div>
+                    <p class="body-text reveal-left" data-delay="200">
+                        <strong>Yayasan Smart Tuning Nusantara (STN)</strong> adalah lembaga pendidikan non-formal nirlaba yang hadir untuk mendemokrasikan akses ilmu otomotif tingkat lanjut. Kami hadir menjembatani kesenjangan kompetensi antara mekanik tradisional dengan tuntutan industri otomotif modern yang semakin digital.
+                    </p>
+                    <p class="body-text mt-1 reveal-left" data-delay="280">
+                        Dengan kurikulum khusus berbasis analisis <strong>Data Stream ECU</strong>, kami membekali setiap peserta kemampuan diagnosa presisi tanpa modal mahal — hanya dengan pemahaman data, logika, dan kompetensi terstandarisasi.
+                    </p>
+                </div>
+                <div class="col-card reveal-right">
+                    <div class="legal-card glassmorphism-light">
+                        <div class="legal-header">
+                            <div class="legal-header-icon-wrap">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h3>Legalitas Resmi Yayasan</h3>
+                                <p>Dokumen Negara yang Sah & Terverifikasi</p>
+                            </div>
+                        </div>
+                        <ul class="legal-items">
+                            <li class="legal-item">
+                                <div class="legal-icon"><i class="fa-regular fa-file-lines"></i></div>
+                                <div>
+                                    <span class="legal-key">SK Kemenkumham RI</span>
+                                    <span class="legal-val">No. AHU-0012927.AH.01.04.Tahun 2025</span>
+                                </div>
+                            </li>
+                            <li class="legal-item">
+                                <div class="legal-icon"><i class="fa-solid fa-stamp"></i></div>
+                                <div>
+                                    <span class="legal-key">Akta Notaris</span>
+                                    <span class="legal-val">No. 01, Tanggal 04 Juli 2025</span>
+                                    <span class="legal-sub">Notaris Qisthi Fauziyyah Sugianto, S.H., M.Kn.</span>
+                                </div>
+                            </li>
+                            <li class="legal-item">
+                                <div class="legal-icon"><i class="fa-solid fa-id-card"></i></div>
+                                <div>
+                                    <span class="legal-key">NPWP Yayasan</span>
+                                    <span class="legal-val">1000.0000.0393.3201</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="legal-footer-badge">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Dokumen dapat diverifikasi secara resmi
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VISI & MISI ===== -->
+    <section id="visi-misi" class="sect-alt">
+        <div class="container">
+            <div class="section-header-center">
+                <div class="section-tag light reveal-up">Landasan Organisasi</div>
+                <h2 class="section-title light reveal-up" data-delay="100">Visi & Misi STN</h2>
+                <div class="title-bar center reveal-up" data-delay="150"></div>
+            </div>
+            <div class="vm-grid">
+                <div class="vm-card reveal-left">
+                    <div class="vm-icon-wrap">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3>Visi</h3>
+                    <p>
+                        Menjadi <strong>pusat unggulan edukasi otomotif digital terdepan di Indonesia</strong> dalam mencetak teknisi yang profesional, inovatif, dan mandiri secara ekonomi.
+                    </p>
+                    <div class="vm-decorator"></div>
+                </div>
+                <div class="vm-missions reveal-right">
+                    <div class="vm-icon-wrap">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3>Misi</h3>
+                    <ul class="mission-list">
+                        <li>
+                            <span class="num">01</span>
+                            <span>Menyelenggarakan pelatihan teknologi injeksi dan digitalisasi otomotif yang terjangkau dan dapat diakses seluruh kalangan.</span>
+                        </li>
+                        <li>
+                            <span class="num">02</span>
+                            <span>Mengembangkan kurikulum inovatif berbasis <strong>analisis ECU Data Stream</strong> yang relevan dengan kebutuhan industri.</span>
+                        </li>
+                        <li>
+                            <span class="num">03</span>
+                            <span>Membangun ekosistem komunitas teknisi yang solid melalui bimbingan studi kasus masalah real di lapangan.</span>
+                        </li>
+                        <li>
+                            <span class="num">04</span>
+                            <span>Memberdayakan ekonomi mekanik nusantara agar mampu bersaing dan berkembang mandiri di era digital.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== KURIKULUM ===== -->
+    <section id="kurikulum" class="sect">
+        <div class="container">
+            <div class="section-header-center">
+                <div class="section-tag reveal-up">Program Unggulan</div>
+                <h2 class="section-title reveal-up" data-delay="100">Master Teknisi Digital <span class="text-accent">6 Bulan</span></h2>
+                <div class="title-bar center reveal-up" data-delay="150"></div>
+                <p class="section-desc reveal-up" data-delay="200">Kurikulum terstruktur oleh praktisi industri, memadukan teori teknis mendalam dengan penerapan alat diagnostik modern.</p>
+            </div>
+            <div class="curriculum-grid">
+                <div class="c-card tilt-card reveal-up" data-delay="0">
+                    <div class="c-num">01</div>
+                    <div class="c-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>Sistem Manajemen Mesin</h3>
+                    <p>EFI (Electronic Fuel Injection) untuk mesin bensin & CRDI (Common Rail Direct Injection) untuk mesin diesel. Mencakup sensor, aktuator, dan logika kerja ECU secara komprehensif.</p>
+                    <div class="c-tags"><span>EFI</span><span>CRDI</span><span>ECU</span></div>
+                </div>
+                <div class="c-card tilt-card reveal-up" data-delay="100">
+                    <div class="c-num">02</div>
+                    <div class="c-icon"><i class="fa-solid fa-wifi"></i></div>
+                    <h3>Komunikasi & Sistem Keamanan</h3>
+                    <p>Arsitektur jaringan CAN Bus antar modul kendaraan, troubleshooting Immobilizer, serta sinkronisasi dan pemrograman ulang sistem Smart Key & Keyless Entry.</p>
+                    <div class="c-tags"><span>CAN Bus</span><span>Immobilizer</span><span>Keyless</span></div>
+                </div>
+                <div class="c-card tilt-card reveal-up" data-delay="200">
+                    <div class="c-num">03</div>
+                    <div class="c-icon"><i class="fa-solid fa-gears"></i></div>
+                    <h3>Sasis, Transmisi & Kenyamanan</h3>
+                    <p>Diagnosa dan perbaikan Transmisi Otomatis (AT/CVT), kontrol iklim AC Digital otomatis, serta analisis dan bleeding Sistem Pengereman ABS.</p>
+                    <div class="c-tags"><span>AT/CVT</span><span>AC Digital</span><span>ABS</span></div>
+                </div>
+                <div class="c-card tilt-card reveal-up" data-delay="300">
+                    <div class="c-num">04</div>
+                    <div class="c-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Teknologi Kendaraan Masa Depan</h3>
+                    <p>Pengenalan fundamental sistem kendaraan Hybrid (HEV): manajemen baterai tegangan tinggi, mode operasi motor listrik, dan interaksi mesin bensin & motor elektrik.</p>
+                    <div class="c-tags"><span>Hybrid</span><span>HEV</span><span>High Voltage</span></div>
+                </div>
+                <div class="c-card tilt-card c-card-wide reveal-up highlight-card" data-delay="400">
+                    <div class="c-num">05</div>
+                    <div class="c-icon accent"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Diagnosa Presisi via Data Stream ECU <span class="badge-star">Keahlian Utama</span></h3>
+                    <p>Inti dari seluruh program. Peserta dilatih membaca, menganalisis, dan menginterpretasikan grafik Data Stream ECU secara real-time menggunakan Scanner OBD untuk menentukan akar masalah kendaraan — <strong>tanpa perlu membongkar mesin.</strong> Inilah kompetensi yang membedakan teknisi STN dari mekanik konvensional.</p>
+                    <div class="c-tags"><span>OBD Scanner</span><span>Live Data</span><span>Grafik ECU</span><span>Root Cause Analysis</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== METODE BELAJAR ===== -->
+    <section id="metode" class="sect-alt">
+        <div class="container">
+            <div class="section-header-center">
+                <div class="section-tag light reveal-up">Cara Belajar</div>
+                <h2 class="section-title light reveal-up" data-delay="100">Ekosistem <span class="text-accent">Blended Mentorship</span></h2>
+                <div class="title-bar center reveal-up" data-delay="150"></div>
+                <p class="section-desc light reveal-up" data-delay="200">Metode kami menggabungkan fleksibilitas digital dengan kekuatan komunitas dan validasi kompetensi fisik langsung.</p>
+            </div>
+
+            <div class="method-timeline">
+                <div class="timeline-line">
+                    <div class="timeline-progress" id="timelineProgress"></div>
+                </div>
+                <div class="method-steps">
+                    <div class="method-step reveal-up" data-delay="0">
+                        <div class="step-connector">
+                            <div class="step-icon-wrap">
+                                <div class="step-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 132" fill="currentColor" width="28" height="28">
+                                        <g>
+                                            <path d="M96.002,40.066H31.996C25.378,40.066,20,45.441,20,52.062v42.943c0,6.621,5.378,11.996,11.996,11.996h64.006 c6.618,0,11.996-5.375,11.996-11.996V52.062C107.998,45.441,102.62,40.066,96.002,40.066z M82.316,79.033 c0,3.313-2.684,5.998-5.998,5.998H38.56c-3.313,0-5.998-2.686-5.998-5.998v-23.75c0-3.314,2.685-5.998,5.998-5.998h37.758 c3.314,0,5.998,2.684,5.998,5.998V79.033z" />
+                                            <path d="M128,49.19v48.685c0,1.967-1.594,3.559-3.559,3.559c-0.654,0-1.284-0.18-1.83-0.518l-15.02-9.289V55.438l15.02-9.283 C124.085,45.244,126,45.961,126,47.433C126,48.086,126,49.19,128,49.19z" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="step-ring"></div>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <span class="step-pill">Fase 1 — Sepanjang Program</span>
+                            <h3>Teori Daring via Zoom</h3>
+                            <p>Sesi kelas interaktif langsung bersama instruktur berpengalaman. Materi disampaikan secara terstruktur menggunakan presentasi teknis, simulasi wiring diagram, dan sesi tanya jawab real-time yang mendalam.</p>
+                        </div>
+                    </div>
+                    <div class="method-step reveal-up" data-delay="150">
+                        <div class="step-connector">
+                            <div class="step-icon-wrap">
+                                <div class="step-icon green"><i class="fa-brands fa-whatsapp"></i></div>
+                                <div class="step-ring green-ring"></div>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <span class="step-pill green-pill">Fase 2 — Harian</span>
+                            <h3>Studi Kasus Real-Time — Forum Teknisi STN</h3>
+                            <p>Pendampingan troubleshooting harian melalui Grup WhatsApp Eksklusif. Instruktur dan komunitas teknisi siap membantu menganalisis masalah kendaraan nyata yang Anda temui di bengkel setiap hari.</p>
+                        </div>
+                    </div>
+                    <div class="method-step reveal-up" data-delay="300">
+                        <div class="step-connector">
+                            <div class="step-icon-wrap">
+                                <div class="step-icon gold"><i class="fa-solid fa-certificate"></i></div>
+                                <div class="step-ring gold-ring"></div>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <span class="step-pill gold-pill">Fase 3 — Bulan Ke-6</span>
+                            <h3>Ujian Luring & Sertifikasi Resmi</h3>
+                            <p>Puncak perjalanan belajar. Peserta mengikuti ujian praktik fisik langsung di bengkel pusat STN untuk membuktikan kompetensi nyata. Peserta lulus menerima <strong>Sertifikat Keahlian Resmi Yayasan STN.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DOKUMENTASI ===== -->
+    <section id="dokumentasi" class="sect-alt">
+        <div class="container">
+            <div class="section-header-center">
+                <div class="section-tag reveal-up">Galeri Kegiatan</div>
+                <h2 class="section-title reveal-up" data-delay="100">Dokumentasi <span class="text-accent">Yayasan STN</span></h2>
+                <div class="title-bar center reveal-up" data-delay="150"></div>
+                <p class="section-desc reveal-up" data-delay="200">Rekam jejak perjalanan dan kegiatan pelatihan Yayasan Smart Tuning Nusantara.</p>
+            </div>
+
+            <!-- SLIDER -->
+            <div class="slider-wrap reveal-up" data-delay="200">
+                <div class="slider-track" id="sliderTrack">
+                    <div class="slide"><img src="dokumentasi/519465776_10057309154394733_3108602202052809538_n.jpg" alt="Dokumentasi STN 1" loading="lazy"></div>
+                    <div class="slide"><img src="dokumentasi/530885439_23997208769978203_913874066978990922_n.jpg" alt="Dokumentasi STN 2" loading="lazy"></div>
+                    <div class="slide"><img src="dokumentasi/547250689_24271066122592465_7090845308297689488_n.jpg" alt="Dokumentasi STN 3" loading="lazy"></div>
+                    <div class="slide"><img src="dokumentasi/547514820_24285888381110239_8087505961360514765_n.jpg" alt="Dokumentasi STN 4" loading="lazy"></div>
+                    <div class="slide"><img src="dokumentasi/548950836_24318701017828975_87477666370204471_n.jpg" alt="Dokumentasi STN 5" loading="lazy"></div>
+                    <div class="slide"><img src="dokumentasi/571191037_24676991705333236_2112886622590825025_n.jpg" alt="Dokumentasi STN 6" loading="lazy"></div>
+                    <div class="slide"><img src="dokumentasi/589839282_24956372490728488_7414285855943913865_n.jpg" alt="Dokumentasi STN 7" loading="lazy"></div>
+                    <div class="slide"><img src="dokumentasi/589941422_24956371730728564_4688358097330379230_n.jpg" alt="Dokumentasi STN 8" loading="lazy"></div>
+                    <div class="slide"><img src="dokumentasi/591479801_24965462833152787_1788672901619400857_n.jpg" alt="Dokumentasi STN 9" loading="lazy"></div>
+                    <div class="slide"><img src="dokumentasi/620033153_25462388370126895_6257758706205906399_n.jpg" alt="Dokumentasi STN 10" loading="lazy"></div>
+                    <div class="slide"><img src="dokumentasi/629643098_25573479802351084_4549281325428369073_n.jpg" alt="Dokumentasi STN 11" loading="lazy"></div>
+                    <div class="slide"><img src="dokumentasi/632309660_25573481275684270_6930132043643547629_n.jpg" alt="Dokumentasi STN 12" loading="lazy"></div>
+                    <div class="slide"><img src="dokumentasi/WhatsApp Image 2026-01-17 at 20.21.12.jpeg" alt="Dokumentasi STN 13" loading="lazy"></div>
+                    <div class="slide"><img src="dokumentasi/WhatsApp Image 2026-01-17 at 20.23.22.jpeg" alt="Dokumentasi STN 14" loading="lazy"></div>
+                    <div class="slide"><img src="dokumentasi/WhatsApp Image 2026-03-15 at 18.19.09.jpeg" alt="Dokumentasi STN 15" loading="lazy"></div>
+                </div>
+
+                <!-- Prev / Next -->
+                <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Sebelumnya">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn slider-next" id="sliderNext" aria-label="Berikutnya">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <!-- Dots -->
+                <div class="slider-dots" id="sliderDots"></div>
+
+                <!-- Counter -->
+                <div class="slider-counter">
+                    <span id="slideCurrentNum">1</span> / <span id="slideTotalNum">15</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STRUKTUR ORGANISASI ===== -->
+    <section id="organisasi" class="sect">
+        <div class="container">
+            <div class="section-header-center">
+                <div class="section-tag reveal-up">Tim Pengurus</div>
+                <h2 class="section-title reveal-up" data-delay="100">Struktur <span class="text-accent">Organisasi STN</span></h2>
+                <div class="title-bar center reveal-up" data-delay="150"></div>
+                <p class="section-desc reveal-up" data-delay="200">Yayasan Smart Tuning Nusantara dikelola oleh individu-individu profesional dan berdedikasi tinggi di bidang otomotif dan manajemen.</p>
+            </div>
+
+            <!-- Ketua (top) -->
+            <div class="org-top reveal-up" data-delay="100">
+                <div class="org-card org-ketua">
+                    <div class="org-avatar">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div class="org-info">
+                        <span class="org-role">Ketua</span>
+                        <h3 class="org-name">Bambang Tri Saputra</h3>
+                    </div>
+                    <div class="org-glow"></div>
+                </div>
+            </div>
+
+            <!-- Connector line -->
+            <div class="org-connector-v"></div>
+
+            <!-- Secondary row -->
+            <div class="org-row">
+                <div class="org-connector-h"></div>
+                <div class="org-card reveal-up" data-delay="150">
+                    <div class="org-avatar sm">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+                    <div class="org-info">
+                        <span class="org-role">Sekretaris</span>
+                        <h3 class="org-name">Ahmad Sidik</h3>
+                    </div>
+                </div>
+                <div class="org-card reveal-up" data-delay="200">
+                    <div class="org-avatar sm">
+                        <i class="fa-solid fa-coins"></i>
+                    </div>
+                    <div class="org-info">
+                        <span class="org-role">Bendahara</span>
+                        <h3 class="org-name">Gusti Irawan</h3>
+                    </div>
+                </div>
+                <div class="org-card reveal-up" data-delay="250">
+                    <div class="org-avatar sm">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <div class="org-info">
+                        <span class="org-role">Humas</span>
+                        <h3 class="org-name">Asep Budi Asikin</h3>
+                    </div>
+                </div>
+                <div class="org-card org-pengawas reveal-up" data-delay="300">
+                    <div class="org-avatar sm">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="org-info">
+                        <span class="org-role">Pengawas</span>
+                        <h3 class="org-name">Herlian Putra</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER / KONTAK ===== -->
+    <footer id="kontak" class="footer">
+        <div class="footer-wave-top">
+            <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#0a1628"/>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand-col reveal-up">
+                    <div class="brand footer-brand">
+                        <img src="LOGOstn.png" alt="Logo STN" class="brand-img-real">
+                        <div class="brand-name">
+                            <span class="brand-primary">Smart Tuning</span>
+                            <span class="brand-secondary">Nusantara</span>
+                        </div>
+                    </div>
+                    <p class="footer-tagline">"Mari Bersama Memajukan Dunia Otomotif Indonesia."</p>
+                    <div class="legal-badge">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Terdaftar Resmi Kemenkumham RI</span>
+                    </div>
+                </div>
+                <div class="footer-contact-col reveal-up" data-delay="100">
+                    <h4>Hubungi Kami</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <strong>Sekretariat Resmi:</strong>
+                                <p>Perumahan Grand Duta Blok D Nomor 12 RT. 000 RW. 000,<br>Kel. Kemantren, Kec. Sumber, Kab. Cirebon, Jawa Barat.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <strong>Email Resmi:</strong>
+                                <p><a href="mailto:admin@smarttuning.or.id">admin@smarttuning.or.id</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div>
+                                <strong>WhatsApp Support:</strong>
+                                <p style="margin-top:0.3rem">
+                                    <a href="https://wa.me/6282299434398" target="_blank" rel="noopener" style="display:inline-block; margin-bottom:0.2rem">+62 822-9943-4398</a><br>
+                                    <a href="https://wa.me/6282124552687" target="_blank" rel="noopener">+62 821-2455-2687</a>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-links-col reveal-up" data-delay="200">
+                    <h4>Navigasi</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#beranda"><i class="fa-solid fa-chevron-right"></i> Beranda</a></li>
+                        <li><a href="#tentang"><i class="fa-solid fa-chevron-right"></i> Tentang Kami</a></li>
+                        <li><a href="#visi-misi"><i class="fa-solid fa-chevron-right"></i> Visi & Misi</a></li>
+                        <li><a href="#kurikulum"><i class="fa-solid fa-chevron-right"></i> Kurikulum</a></li>
+                        <li><a href="#metode"><i class="fa-solid fa-chevron-right"></i> Metode Belajar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Yayasan Smart Tuning Nusantara. Terdaftar Resmi di Kemenkumham RI.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
