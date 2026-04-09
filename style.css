@@ -1349,17 +1349,38 @@ section, .footer { position:relative; z-index:1; }
     .org-connector-h { left: 5%; right: 5%; }
 }
 @media(max-width:600px) {
+    /* Stack organization chart vertically on mobile */
     .org-row {
-        overflow-x: auto;
+        flex-direction: column;
+        align-items: center;
         flex-wrap: nowrap;
-        justify-content: flex-start;
-        padding-bottom: 1rem;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
+        gap: 1.2rem;
+        overflow-x: visible;
+        padding-bottom: 0;
     }
-    .org-row::-webkit-scrollbar { display: none; }
+    /* Add vertical trunk line for mobile org chart */
+    .org-row::before {
+        content: '';
+        position: absolute;
+        top: 0; bottom: 0; left: 50%;
+        width: 2px; transform: translateX(-50%);
+        background: linear-gradient(180deg, var(--blue-lt) 0%, var(--border-1) 20%, var(--border-1) 100%);
+        z-index: 0;
+    }
     .org-connector-h { display: none; }
-    .org-card { min-width: 200px; flex-shrink: 0; }
-    .org-ketua { min-width: 100%; }
-    .org-top { padding: 0 .5rem; }
+    
+    .org-card { 
+        min-width: unset;
+        width: 100%; 
+        max-width: 320px; 
+        flex-shrink: 0;
+        z-index: 1; /* Stay above vertical trunk line */
+    }
+    .org-ketua { 
+        min-width: unset;
+        width: 100%; 
+        max-width: 320px; 
+        padding: 1.5rem;
+    }
+    .org-top { padding: 0; }
 }
